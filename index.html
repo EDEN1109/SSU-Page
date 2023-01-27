@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | SSU</title>
+    <title>성신여자대학교 | 비교과성과보고회</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -88,7 +88,6 @@
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
           canvas.style.width = window.innerWidth - (window.innerWidth * 0.005) + 'px';
           canvas.style.height = window.innerHeight - (window.innerHeight * 0.005) + 'px';
       }
@@ -101,10 +100,7 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
+            loadingBar.style.display = "none";
         }).catch((message) => {
           alert(message);
         });
